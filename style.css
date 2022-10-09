@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Raleway:wght@600&family=Roboto+Mono:wght@100&display=swap');
+
+* {
+    margin: 10px;
+    font-family: 'Poppins';
+}
+
+::selection {
+    color: #fff;
+    background: #C60060;
+}
+
+body {
+    color: #29335C;
+}
+
+.title-1 {
+    font-size: 25px;
+
+}
+
+.title-2 {
+    font-size: 20px;
+    margin-top: 25px
+}
+
+.title-3 {
+    font-size: 18px;
+    padding-left: 10px;
+    margin-top: 25px;
+
+}
+
+.title-4 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: gray;
+    font-style: italic
+}
+
+.title-4 small {
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+}
+
+.delivery {
+    width: 100%;
+}
+
+.empty-box {
+    background: #ececf4;
+    height: 30px;
+}
+
+.summary {
+    margin-left: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    top: 100px;
+    min-width: auto;
+    min-height: auto;
+    padding: 30px;
+    background: #ececf4;
+
+
+}
+
+#submit-btn {
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    background: #C60060;
+    color: #DCDCDC;
+}
+
+#submit-btn:hover {
+    background-color: #B2004C;
+    color: #fff;
+}
+
+#submit-btn:disabled {
+    opacity: 0.5;
+}
+
+.summary .checkbox-prg {
+    margin-top: 10px
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between
+}
+
+.payment-types {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.payment-types.active {
+    opacity: 1;
+    pointer-events: initial;
+
+}
+
+.card {
+    display: none;
+    margin: 0;
+}
+
+
+.credit-form {
+    width: 100%;
+    margin: 0;
+}
+
+.card .card-form-input input {
+    border: none;
+    border-bottom: 1px solid #E6E6EB;;
+    outline: none;
+    font-size: 15px;
+    padding: 5px 5px;
+    width: 450px;
+    color: #29335C;
+}
+
+.row {
+    display: flex;
+    margin: 0;
+}
+
+.row .card-form-input-r input {
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #E6E6EB;;
+    outline: none;
+    font-size: 15px;
+    padding: 5px 0;
+    color: #29335C;
+}
+
+.card .card-form-checkbox {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.pay-at-the-door {
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.pay-at-the-door ul {
+    margin-top: 20px;
+    color: #81819B;
+    font-size: .75rem;
+    line-height: 1.3;
+    margin: 30px;
+}
+
+.pay-at-the-door p {
+    font-size: 18px
+}
+
+.pay-at-the-door .pay-at-the-door-form-input {
+    width: 200px;
+}
+
+
+.pay-at-the-door .eft-form-radio {
+    font-size: 15px
+}
+
+.card.active {
+    display: block;
+
+}
+
+.pay-at-the-door.active {
+    display: block;
+    padding: 10px;
+}
+
+#card-payment {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #29335C;
+    padding-bottom: 10px;
+
+}
+
+#card-payment.active {
+    border-bottom: 2px solid #d9005e;
+    color: #d9005e;
+    font-size: 14px;
+}
+
+#pay-at-the-door-payment {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #29335C;
+    padding-bottom: 10px;
+}
+
+#pay-at-the-door-payment.active {
+    border-bottom: 2px solid #d9005e;
+    color: #d9005e;
+    font-size: 14px;
+}
+
+.sözleşme {
+    background: #ececf4;
+    padding: 25px;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+.agreement {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.agreement.active {
+    opacity: initial;
+}
+
+.msg-err {
+    color: red;
+}
+
+.msg-scs {
+    color: green;
+}
+
+.msg-inf {
+    color: yellow;
+}
+
+.global {
+    width: calc(100% - 20px);
+    padding-left: 30px;
+    height: 50px;
+    color: white
+}
+
+.global-scs {
+    background: green;
+}
+
+.global-err {
+    background: red;
+}
+
+.global-inf {
+    background: yellow;
+}

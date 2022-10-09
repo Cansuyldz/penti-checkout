@@ -1,0 +1,162 @@
+* {
+    margin: 10px;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+}
+
+.title-1 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.title-2 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.title-3 {
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.title-4 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: grey;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+
+}
+
+.summary {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    top: 50px;
+    min-width: auto;
+    min-height: auto;
+    padding: 50px;
+    .checkbox-prg {
+        margin-top: 10px;
+    }
+    button {
+        float: right;
+        background: #C60060;
+        color: #ffff;
+        border: none;
+        border-radius: 10px;
+        width: 120px;
+        height: 30px;
+        font-size: 15px;
+        font-weight: lighter;
+    }
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card {
+    width: 500px;
+
+    display: none;
+    .card-form-input {
+        width: 200px;
+        font-size: 18px;
+        input {
+            height: 30px;
+            border-radius: 10px;
+            border-color: darkred;
+            outline: none;
+            font-size: 17px;
+            padding: 0 5px;
+        }
+    }
+    .card-form-input-f {
+
+        input {
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+            border-color: darkred;
+            outline: none;
+            font-size: 17px;
+            padding: 0 15px;
+        }
+    }
+    .card-form-checkbox {
+        margin: 10px;
+    }
+}
+
+.eft {
+    width: 500px;
+
+    display: none;
+    p {
+        font-size: 18px;
+    }
+    .eft-form-input {
+        width: 200px;
+
+        font-size: 18px;
+        input {
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            border-color: darkred;
+            outline: none;
+            font-size: 17px;
+            padding: 0 5px;
+        }
+    }
+    .eft-form-radio {
+        font-size: 15px;
+    }
+}
+
+.card.active {
+    display: block;
+}
+
+.eft.active {
+    display: block;
+}
+
+#card-payment {
+    background: none;
+    border-bottom: 2px solid gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#card-payment.active {
+    border-bottom: 2px solid purple;
+}
+
+#eft-payment {
+    background: none;
+    border-bottom: 2px solid gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#eft-payment.active {
+    border-bottom: 2px solid purple;
+}
+
+.sözleşme {
+    background: grey;
+}

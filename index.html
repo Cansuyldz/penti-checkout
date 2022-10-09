@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>payment</title>
+</head>
+
+<body id="site-header">
+    <div class="container">
+        <div class="paymentType">
+            <div class="header">
+                <div class="delivery">
+                    <div class="title-1">Teslimat ve Ödeme</div>
+                    <div class="title-2">Gönderi Yöntemi</div>
+                    <div class="delivery-checkbox"><input type="checkbox"> standart teslimat</div>
+                </div>
+            </div>
+            <div class="empty-box"></div>
+            <!--        Credit cart -->
+            <div class="payment-types">
+                <div class="title-2">Ödeme Yöntemi</div>
+                <div class="card-header" style="display:flex;">
+                    <button id="card-payment">Kredi Kartı/ Banka Kartı</button>
+                    <button id="pay-at-the-door-payment">Kapıda Ödeme</button>
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <form class="credit-form">
+                            <div class="card-form-input">
+                                <input type="text" class="card-name" placeholder="Kart Sahibinin Adı*">
+                                <div class="card-name-required-err" style="display: none;color:red;">Zorunlu</div>
+                                <div class="card-name-regex-err" style="display: none;color:red;">Uyuşmuyor</div>
+                            </div>
+                            <div class="card-form-input">
+                                <input type="text" class="card-number" maxlength="20" placeholder="Kart Numarası*">
+                                <div class="card-number-required-err" style="display: none;color:red;">Zorunlu</div>
+                                <div class="card-number-regex-err" style="display: none;color:red;">16 karakter giriniz
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-form-input-r">
+                                    <input type="text" class="card-date tarih" placeholder="Son Kullanma Tarihi*">
+                                    <div class="card-date-required-err" style="display: none;color:red;">Zorunlu</div>
+                                </div>
+                                <div class="card-form-input-r">
+                                    <input type="text" maxlength="3" class="card-cvc" placeholder="Güvenlik kodu*">
+                                    <div class="card-cvc-required-err" style="display: none;color:red;">Zorunlu</div>
+
+                                </div>
+                            </div>
+                            <div class="card-form-checkbox"><input type="checkbox"> 3D kullanmak istiyorum <a routerLink="#">3D Nedir?</a>
+                            </div>
+                            <div class="card-form-checkbox">
+                                <input type="checkbox"> Kendi kart bilgilerimin MasterPass ile kaydedilmesini istiyorum <a routerLink="#">MasterPass
+                            nedir?</a>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="pay-at-the-door">
+                        <div>
+                            <input type="radio" class="first-radio" name="pay"> Kapıda Nakit öde
+                            <div class="title-4">Kapıda Nakitle Ödeme Ücreti: <b>₺6,95</b></div>
+                            <div class="pay-at-the-door-fast"></div>
+                            <ul>
+                                <li>Alışveriş tutarınıza kargo firması tarafından talep edilen kapıda ödeme ücreti eklenecektir.
+                                </li>
+                                <li>1- Kapıda nakit ödeme seçeneğinde sadece nakit ödeme kabul edilmektedir.</li>
+                                <li>2- Kapıda nakit ödeme seçeneğinde kredi kartı ile ödeme kabul edilmemektedir.</li>
+                                <li>3- Kapıda kredi kartıyla ödeme seçeneğiyle alınan ürünlerin iadesi mağazalarımızdan veya site üzerinden iade formunu doldurup iade talebinde bulunarak gerçekleştirilebilir.
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div>
+                            <input type="radio" class="second-radio" name="pay"> Kapıda Kredi Kartı ile öde
+                            <div class="title-4">Kapıda Kredi Kartıyla Ödeme Ücreti: <b>₺6,95</b></div>
+                            <div class="pay-at-the-door-slow"></div>
+                            <ul>
+                                <li>Alışveriş tutarınıza kargo firması tarafından talep edilen kapıda ödeme ücreti eklenecektir.
+                                </li>
+                                <li>1- Kapıda kredi kartıyla ödeme seçeneğinde sadece kredi kartı kabul edilmektedir.</li>
+                                <li>2- Kapıda nakit ödeme kabul edilmemektedir.</li>
+                                <li>3- Kapıda kredi kartıyla ödeme seçeneğiyle alınan ürünlerin iadesi mağazalarımızdan veya site üzerinden iade formunu doldurup iade talebinde bulunarak gerçekleştirilebilir.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-box"></div>
+            <!--        Agreement Body-->
+            <div class="agreement">
+                <div class="agreement-header">
+                    <div class="title-2" style="margin-top: 28px">Sözleşmeler</div>
+                </div>
+                <div class="agreement-body">
+                    <div class="title-3">
+                        Ön bilgilendirme formu
+                    </div>
+                    <div class="sözleşme" style="font-weight: normal">
+                        <b>
+                        Ön bilgilendirme formu
+                    </b>
+                        <p> İşbu Satış Sözleşmesi Ön Bilgi Formu’nun konusu, SATICI' nın, SİPARİŞ VEREN/' ya satışını yaptığı, aşağıda nitelikleri ve satış fiyatı belirtilen ürün/ürünlerin satışı ve teslimi ile ilgili olarak 6502 sayılı Tüketicilerin Korunması
+                            Hakkındaki Kanun-Mesafeli Sözleşmeleri Uygulama Esas ve Usulleri Hakkında Yönetmelik hükümleri gereğince tarafların hak ve yükümlülüklerini kapsamaktadır. İş bu ön bilgilendirme formunu kabul etmekte ALICI, sözleşme konusu
+                            siparişi onayladığı takdirde sipariş konusu bedeli ve varsa kargo ücreti, vergi gibi belirtilen ek ücretleri ödeme yükümlülüğü altına girdiğini ve bu konuda bilgilendirildiği peşinen kabul etmektedir.</p>
+
+
+                    </div>
+                    <div class="title-3">
+                        Satış Formu
+                    </div>
+                    <div class="sözleşme" style="margin-bottom: 500px">
+                        <b>
+                        Satış Formu
+                    </b>
+                        <p>İşbu Satış Sözleşmesi Ön Bilgi Formu’nun konusu, SATICI' nın, SİPARİŞ VEREN/' ya satışını yaptığı, aşağıda nitelikleri ve satış fiyatı belirtilen ürün/ürünlerin satışı ve teslimi ile ilgili olarak 6502 sayılı Tüketicilerin Korunması
+                            Hakkındaki Kanun-Mesafeli Sözleşmeleri Uygulama Esas ve Usulleri Hakkında Yönetmelik hükümleri gereğince tarafların hak ve yükümlülüklerini kapsamaktadır. İş bu ön bilgilendirme formunu kabul etmekte ALICI, sözleşme konusu
+                            siparişi onayladığı takdirde sipariş konusu bedeli ve varsa kargo ücreti, vergi gibi belirtilen ek ücretleri ödeme yükümlülüğü altına girdiğini ve bu konuda bilgilendirildiği peşinen kabul etmektedir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    Submit Btn-->
+        <div class="summary">
+            <div class="title-2">Sipariş Özeti</div>
+            <div class="checkbox-prg checkbox-information">
+                <input type="checkbox" class="information-agreement"> Ön bilgilendirme formunu okudum, onaylıyorum.
+                <div class="information-agreement-err" style="display: none;color:red;">Seçiniz*</div>
+            </div>
+            <div class="checkbox-prg checkbox-sales">
+                <input type="checkbox" class="sales-agreement"> Mesafeli satış sözleşmesini okudum, onaylıyorum.
+                <div class="sales-agreement-err" style="display: none;color:red;">Seçiniz*</div>
+            </div>
+            <input id="submit-btn" type="submit" disabled value="Onayla,Bitir" />
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js"></script>
+<script src="cleave.js"></script>
+<script src="mask.js"></script>
+<script>
+    var ACC = {}
+</script>
+<script src="acc.regex.js"></script>
+<script src="acc.validator.js"></script>
+<script src="acc.utils.js"></script>
+<script src="acc.payment.js"></script>
+
+</html>
