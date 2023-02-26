@@ -1,4 +1,4 @@
-# -odeme-sayfasi-penti-
+
 ![Ekran Görüntüsü (14)](https://user-images.githubusercontent.com/109664594/221432340-320ca8b6-2008-4389-8de1-090e579a5f42.png)
 ![Ekran Görüntüsü (15)](https://user-images.githubusercontent.com/109664594/221432346-85e70878-f69d-43ab-b67a-c5e6a4cf6164.png)
 ![Ekran Görüntüsü (16)](https://user-images.githubusercontent.com/109664594/221432352-7260388f-2b95-4b83-9435-6fac78532ee7.png)
