@@ -25,11 +25,11 @@
             <div class="payment-types">
                 <div class="title-2">Ödeme Yöntemi</div>
                 <div class="card-header" style="display:flex;">
-                    <button id="card-payment">Kredi Kartı/ Banka Kartı</button>
-                    <button id="pay-at-the-door-payment">Kapıda Ödeme</button>
+                    <button id="card-payment" data-tab="1">Kredi Kartı/ Banka Kartı</button>
+                    <button id="pay-at-the-door-payment" data-tab="2">Kapıda Ödeme</button>
                 </div>
                 <div class="card-body">
-                    <div class="card">
+                    <div class="card" data-tab="1">
                         <form class="credit-form">
                             <div class="card-form-input">
                                 <input type="text" class="card-name" placeholder="Kart Sahibinin Adı*">
@@ -62,7 +62,7 @@
 
                         </form>
                     </div>
-                    <div class="pay-at-the-door">
+                    <div class="pay-at-the-door" data-tab="2">
                         <div>
                             <input type="radio" class="first-radio" name="pay"> Kapıda Nakit öde
                             <div class="title-4">Kapıda Nakitle Ödeme Ücreti: <b>₺6,95</b></div>

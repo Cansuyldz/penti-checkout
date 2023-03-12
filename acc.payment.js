@@ -1,10 +1,9 @@
 ACC.payment = {
     el: {
         delivery: '.delivery',
-        paymentTypes: '.payment-types',
-        agreement: '.agreement',
         card: '.card',
         payAtTheDoor: '.pay-at-the-door',
+        payAtTheDoorRadios: '.pay-at-the-door [input=type"radio"]',
         siteHeader: '#site-header',
         summary: '.summary',
         agreement: '.agreement',
@@ -26,7 +25,7 @@ ACC.payment = {
     },
     init: function () {
         this.event.updateStandartDelivery();
-        this.event.updatePaymentTypes();
+        this.event.globalTabs();
         this.event.payAtTheDoorChecked()
         this.event.submitBtn();
         this.event.agreementControl();
@@ -35,7 +34,6 @@ ACC.payment = {
     event: {
         updateStandartDelivery: function () {
             var _pay = ACC.payment;
-            var delivery = _pay.el.delivery;
             var card = _pay.el.card;
             var cardBtn = _pay.el.btnGroups.cardPaymentBtn;
             var paymentTypes = _pay.el.paymentTypes;
@@ -55,62 +53,37 @@ ACC.payment = {
                     $(paymentTypes).removeClass('active')
                     $(agreement).removeClass('active');
                     $(_pay.el.btnGroups.submitBtn).attr('disabled', true)
+
                 }
             })
         },
-        updatePaymentTypes: function () {
-            var _pay = ACC.payment;
+        globalTabs: function () {
             var _utils = ACC.utils;
-            var card = _pay.el.card;
-            var payAtTheDoor = _pay.el.payAtTheDoor;
-            var cardPaymentBtn = _pay.el.btnGroups.cardPaymentBtn;
-            var payAtTheDoorBtn = _pay.el.btnGroups.payAtTheDoorBtn;
-            $(payAtTheDoorBtn).click(function () {
-                _utils.errorForInput.removeMessage($(card));
-                $(payAtTheDoor).addClass('active');
-                $(card).removeClass('active');
-                $(payAtTheDoorBtn).addClass('active');
-                $(cardPaymentBtn).removeClass('active')
-            })
-            $(cardPaymentBtn).click(function () {
-                _utils.errorForInput.removeMessage($(payAtTheDoor));
-                $(card).addClass('active');
-                $(payAtTheDoor).removeClass('active');
-                $(cardPaymentBtn).addClass('active');
-                $(payAtTheDoorBtn).removeClass('active')
-            })
+            $('[data-tab]').click(function () {
+                var tabNumber = $(this).data('tab');
+                $('[data-tab]').removeClass('active');
+                $('[data-tab="' + tabNumber + '"]').addClass('active');
+                _utils.errorForInput.removeMessage($('[data-tab]'));
+            });
         },
         payAtTheDoorChecked: function () {
             var _pay = ACC.payment;
-            var _utils = ACC.utils;
-            var payAtTheDoor = _pay.el.payAtTheDoor;
-            var payAtTheDoorRadios = $(payAtTheDoor).find('input');
-            var firstRadio = _pay.el.btnGroups.firstRadio;
-            var firstRadioDiv = _pay.el.firstRadioDiv;
-            var secondRadioDiv = _pay.el.secondRadioDiv;
-            var secondRadio = _pay.el.btnGroups.secondRadio;
+            var payAtTheDoorRadios = $(_pay.el.payAtTheDoor).find('input[type="radio"]');
             var phoneDiv = '<div class="hidden-phone">Telefon Numarası <input type="text" class="phone"></div>'
-            if ($(payAtTheDoorRadios).length > 0) {
-                $(payAtTheDoorRadios).click(function () {
-                    $(payAtTheDoor).find('.hidden-phone').remove();
-                    if ($(firstRadio).is(':checked')) {
-                        $(firstRadioDiv).append(phoneDiv);
-                        $(secondRadioDiv).find('.hidden-phone').remove();
-                    }
-                    if ($(secondRadio).is(':checked')) {
-                        $(secondRadioDiv).append(phoneDiv);
-                        $(firstRadioDiv).find('.hidden-phone').remove();
-                    }
-                    var cleave = new Cleave('.phone', {
-                        delimiters: ['(', ')', ' ', ' ', ' '],
-                        prefix: '0',
-                        noImmediatePrefix: true,
-                        blocks: [1, 3, 3, 2, 2],
-                        numericOnly: true,
-                        delimiterLazyShow: true
-                    })
+            $(payAtTheDoorRadios).click(function () {
+                $('.hidden-phone').remove();
+                if ($(this).is(':checked')) {
+                    $(this).parent().append(phoneDiv)
+                }
+                var cleave = new Cleave('.phone', {
+                    delimiters: ['(', ')', ' ', ' ', ' '],
+                    prefix: '0',
+                    noImmediatePrefix: true,
+                    blocks: [1, 3, 3, 2, 2],
+                    numericOnly: true,
+                    delimiterLazyShow: true
                 })
-            }
+            })
         },
         submitBtn: function () {
             var _pay = ACC.payment;
@@ -159,7 +132,6 @@ ACC.payment = {
             var siteHeader = _pay.el.siteHeader;
             var summary = _pay.el.summary;
             var agreement = _pay.el.agreement;
-            var card = _pay.el.card;
             var payAtTheDoor = _pay.el.payAtTheDoor;
             var sumbitBtn = _pay.el.btnGroups.submitBtn;
             var informationAgreement = _pay.el.informationAgreement;
